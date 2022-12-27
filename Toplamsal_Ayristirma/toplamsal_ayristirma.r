@@ -83,5 +83,5 @@ Pacf(hata,main="Hata",lag.max = 42, ylim=c(-1,1), lwd=3)
 # Ancak nihai kararı Box-Ljung testi verir:
 # H0: hatalar serisi ile ak-gürültü serisi arasında fark yoktur.
 # Hs: hatalar serisi ile ak-gürültü serisi arasında fark yoktur.
-Box.test(hata, lag = 10, type = "Ljung-Box")
+Box.test(hata, lag = 42, type = "Ljung-Box")
 # test sonucuna göre H0 reddedilir. Yani hatalar akgürültü serisi olmadığı için model kullanılamaz.
