@@ -21,9 +21,13 @@ df_ts <- ts(df_xts[1:144], frequency = 18)
 #zaman serisi grafiği
 plot.ts(df_ts)
 df_ts[is.nan(df_ts)] <- 0
+winters <- ets(df_ts, model = "AAA")
+summary(winters)
 df_timeseriescomponents <- decompose(df_ts)
 
-plot(df_timeseriescomponents)
+
+plot(df_timeseriescomponents, lwd=2, lag=42)
+Acf(df_timeseriescomponents$trend)
 View(df_ts)
 #Mevsimsellikten arındırılmış hali
 df_timeseriesseasonallyadjusted <- df_ts - df_timeseriescomponents$seasonal

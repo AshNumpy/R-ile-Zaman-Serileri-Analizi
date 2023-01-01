@@ -1,5 +1,6 @@
 # install.packages("fpp")
 # install.packages("stats")
+rm(list = ls())
 
 # libs
 library(fpp)
@@ -22,10 +23,10 @@ df_xts <- as.xts(df[,-1], order.by = df[,1])
 class(df_xts) ; head(df_xts)
 
 # grafikler
-ts_plot <- ts.plot(df_ts, xlab="Zaman", ylab="Üretilen Enerji")
+ts_plot <- ts.plot(df_xts, xlab="Zaman", ylab="Üretilen Enerji")
 
-acf_plot <- Acf(df_ts,lag.max = 42,  ylim=c(-1,1), lwd=3)
-pacf_plot <- Pacf(df_ts,lag.max = 42, ylim=c(-1,1), lwd=3)
+acf_plot <- Acf(df_xts,lag.max = 42,  ylim=c(-1,1), lwd=3)
+pacf_plot <- Pacf(df_xts,lag.max = 42, ylim=c(-1,1), lwd=3)
 
 # zaman serisi
 df_ts <- ts(df_xts[1:144], frequency = 18)
