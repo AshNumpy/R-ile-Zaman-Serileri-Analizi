@@ -6,7 +6,7 @@ library(ggplot2)
 library(forecast)
 
 # load data
-df <- read.csv("../Toplamsal_Ayristirma/dataset.csv")
+df <- read.csv("./Toplamsal_Ayristirma/dataset.csv")
 names(df) <- c("date", "electric")
 
 
@@ -52,6 +52,6 @@ View(hata)
 Acf(hata, lag.max = 42, lwd=3, ylim=c(-1,1))
 Pacf(hata, lag.max = 42, lwd=3, ylim=c(-1,1))
 
-Box.test(hata, lag = 10, type = "Ljung-Box")
+Box.test(hata, lag = 42, type = "Ljung-Box")
 ##Hatalar akgürültü değildir. Demekki serimiz çarpımsal ayrıştırmaya uygun bir seri değildir.
 
