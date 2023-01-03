@@ -8,3 +8,5 @@ Analiz sürecinde ön işleme olarak zaman serisi analizi yapıldıktan sonra se
 
 ### Sonuç Raporu
 Analiz sonucunda gelecek zamana ait enerji üretimini tahmin edebilen modeli elde ettik. Modelimizin BIC değerini 1542.19 RMSE değerini ise 99.38836 olarak elde ettik.
+
+Detaylı raporlamaya dosyalardan `./Rapor.pdf` kısmından ulaşılabilir.
